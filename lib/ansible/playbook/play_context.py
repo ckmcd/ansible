@@ -513,8 +513,8 @@ class PlayContext(Base):
 
             elif self.become_method == 'pbrun':
 
-                prompt='assword:'
-                becomecmd = '%s -b %s -u %s %s' % (exe, flags, self.become_user, success_cmd)
+                prompt='Password:'
+                becomecmd = '%s -b %s -u %s %s' % (exe, flags, self.become_user, '%s -c %s' % (executable, success_cmd))
 
             elif self.become_method == 'pfexec':
 
